@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
         btMemorize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String valor1=tvNumeros.getText().toString();
+                int i1=Integer.parseInt(tvNumeros.getText().toString());
                 Intent in = new Intent(MainActivity.this, Resultado.class);
+                in.putExtra("n1", tvNumeros.getText().toString());
                 startActivity(in);
             }
         });
